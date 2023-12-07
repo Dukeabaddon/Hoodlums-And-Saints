@@ -1,12 +1,12 @@
 const teamPhotos = [
-    '/Group/Group/Group1.jpg',
-    '/Group/Group/Group2.jpg',
-    '/Group/Group/Group3.jpg',
-    '/Group/Group/Group4.jpg',
-    '/Group/Group/Group5.jpg',
-    '/Group/Group/Group6.jpg',
-    '/Group/Group/Group7.jpg',
-    '/Group/Group/Group8.jpg',
+    'Group1.jpg',
+    'Group2.jpg',
+    'Group3.jpg',
+    'Group4.jpg',
+    'Group5.jpg',
+    'Group6.jpg',
+    'Group7.jpg',
+    'Group8.jpg',
 ];
 
 function displayGallery() {
