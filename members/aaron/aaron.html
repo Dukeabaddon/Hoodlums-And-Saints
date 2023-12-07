@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron F. Mecate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background-music" autoplay>
+        <source src="_MELANCHOLIA_ Music Box Sad, creepy song.mp3" type="audio/mpeg">
+    </audio>
+    <section>
+        <img src="images/sun.png" alt="sun" id="sun">
+        <img src="images/mountains.png" alt="mountain" id="mountain" >
+        <img src="images/tower.png" alt="tower" id="tower">
+        <h2 id="text">Aaron F. Mecate</h2>
+        <img src="images/front.png" alt="front" id="front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Hi! My name is Aaron Mecate</h2>
+        <div class="upper">
+            <div class="profile"><img class="frame" src="images/frame.png" alt=""><img class="pic" src="images/aaron.jpg" alt=""></div>
+        </div>
+        <div class="upright">
+            <p><span class="span">Full Name: </span>Aaron F. Mecate</p>
+            <p><span class="span">Birthday: </span>November 18,2002</p>
+            <p><span class="span">Age: </span>21</p>
+            <p><span class="span">Zodiac Sign: </span>Scorpio</p>
+        </div>
+        <div class="description"><p>
+            Aaron Mecate is a coder, cyclist, and bookworm who finds inspiration in lines of code,
+             scenic paths, and captivating stories. He weaves his diverse passions into a tapestry
+              of creativity, sharing his unique perspective through digital creations and real-world
+               adventures. Explore this space to discover Aaron's work and join him on his journey.
+        </p></div>
+        <div class="hobbies"><img src="images/bike.png"><img src="images/books.png"><img src="images/code.png" alt=""></div>
+    </div>
+    <script src="aaron.js" defer></script>
+    <script>
+        let sun = document.getElementById('sun');
+        let mountain = document.getElementById('mountain');
+        let tower = document.getElementById('tower');
+        let text = document.getElementById('text');
+        let front = document.getElementById('front');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            sun.style.top = value + 1.05 +'px'
+            mountain.style.marginRight = value + 1.5 +'px'
+            mountain.style.top = value + 0.5 +'px'
+            tower.style.top = value + 0.5 +'px'
+            front.style.bottom = value + 0.5 +'px'
+            text.style.marginTop = value + 1.5 +'px'
+        })
+    </script>
+</body>
+</html>

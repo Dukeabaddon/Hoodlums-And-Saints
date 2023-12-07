@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3f3f3;
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+  font-display: black;
+}
+
+span {
+  opacity: 0;
+  filter: blur(4px);
+  display: inline-block;
+  animation: blur 0.8s ease-in-out forwards, fade-in 0.8s ease-in-out forwards;
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(4px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}

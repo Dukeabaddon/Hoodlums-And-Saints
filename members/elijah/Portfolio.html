@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elijah Broncano's Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('Background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 80%;
+      display: flex;
+    }
+
+    .profile-image {
+      flex: 0 0 50%;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+    }
+
+    .profile-image img {
+      width: 120%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .profile-image img:hover {
+      transform: scale(1.1);
+    }
+
+    .profile-info {
+      flex: 0 0 50%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 8px;
+      border: 2px solid #3498db;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      color: #3498db;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #4CAF50;
+    }
+    .dream-section {
+      margin-top: 20px;
+    }
+
+    .dream-section h2 {
+      color: #3498db;
+    }
+
+    .dream-section p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="profile-image">
+      <img src="Kal_tsit.png" alt="Elijah Broncano">
+    </div>
+    <div class="profile-info">
+      <h2>About Me</h2>
+      <p>
+        My name is Elijah Regan C Broncano, and I am an IT student at Quezon City University. I am simply a carefree and helpful person that always aims to see a smile on your face.
+      </p>
+
+      <h2>Personal Information</h2>
+      <ul>
+        <li><strong>Age:</strong> 19</li>
+        <li><strong>Birthday:</strong> November 10, 2004</li>
+        <li><strong>Hobbies:</strong> Playing Arknights, Writing, and Reading Books</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:elijahreganb@gmail.com">elijahreganb@gmail.com</a><br>
+         GitHub: <a href="https://github.com/DrMitsuwari" target="_blank">github.com/DrMitsuwari</a>
+      </p>
+
+      <h2>Address</h2>
+      <p>Blk 2 Lot 38 St. Francis Village, Brgy Sta. Lucia, Novaliches, Quezon City</p>
+
+      <!-- New dream section -->
+      <div class="dream-section">
+        <h2>Dream</h2>
+        <p>
+          Be a game developer that helps with mental health and gives people games that not only they can relate to. Games that can reward them for their efforts, but also a game that can make you say "it's not just a game."
+        </p>
+      </div>
+
+      <!-- Favorite song heading -->
+      <h2>Favorite Song</h2>
+
+      <!-- Music player with autoplay -->
+      <audio controls autoplay>
+        <source src="Operation Pyrite.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+@font-face {
+  font-family: 'valorant';
+  src: url(fonts/valorant/Valorant\ Font.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+/*navbat*/
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 102;
+}
+.icon {
+  width: 80px;
+  filter:invert(1);
+  transform: translateX(-55px);
+}
+.logo {
+  font-size: 2em;
+  color: #fff;
+  user-select: none;
+  transform: translate(-280px);
+}
+.navigation {
+  transform: translateX(40px);
+}
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 40px;
+}
+.navigation a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+.navigation a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.navigation .btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: .5s;
+}
+.navigation .btnLogin-popup:hover {
+  background: #fff;
+  color: #9a0820;
+}
+/*homepage*/
+.homepage {
+  width: 100vw;
+  height: 100vh;
+  background: no-repeat url(https://img.freepik.com/free-photo/red-black-brush-stroke-banner-background-perfect-canva_1361-3597.jpg?w=1060&t=st=1701421101~exp=1701421701~hmac=49497edac5bc8b36e70562c91414c0e33440c23a07aa59e0a8ed667af51b54f5);
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+}
+.homepage::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 11;
+}
+.homepage h1 {
+  position: absolute;
+  color: rgb(248, 222, 222);
+  top: 32%;
+  left: 49%;
+  font-size: 3em;
+  font-family: 'Merriweather Sans', sans-serif;
+  width:  600px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0.50s;
+  user-select: none;
+}
+.btn {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid ;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: .5s;
+  position: absolute;
+  bottom: 22%;
+  right: 25%;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 1.50s;
+  opacity: 0;
+}
+.btn:hover {
+  background: #fff;
+  color: #9a0820;
+}
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
+/*about us*/
+.aboutus{
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgb(154,8,32),#0a0815, #9a0820);
+  background-size: cover;
+}
+.gallery {
+  border: 1px solid black;
+  width: 100%;
+  height: 100vh;
+}
+.footer{
+  border: 1px solid black;
+  height: 9rem;
+}
+/*ABOUT US*/
+.containerMembers {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 93%;
+  height: 500px;
+  gap: 5px;
+  min-width: 100%;
+}
+.members {
+  display: flex;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid black;
+  transition: transform 0.3s ease-in-out, opacity 0.8s ease-in-out;
+}
+.members img {
+  width: 200px;
+  height: 450px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+.members:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  transition: transform 0.3s ease-in-out ,opacity 0.8s ease-in-out;
+}
+.members:hover img{
+  transform: scale(1.5);
+  background-color: black;
+  opacity: 0.5;
+}
+.name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(234, 234, 234);
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'Poppins';
+  text-align: center;
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  opacity: 0;
+  z-index: 1;
+  user-select: none;
+}
+.members:hover .name {
+  opacity: 1;
+ }
+.team {
+  position: static;
+  top: 0;
+  margin-top: -85px;
+  padding: 1rem 1.5rem;
+  z-index: 1;
+  border: 3px solid;
+  border-image-slice: 1;
+  border-width: 7px;
+  border-image-source: linear-gradient(var(--angle), #C70039, #F94C10, #F8DE22);
+  animation: 3s rotate linear infinite;
+  -angle: 0deg;
+}
+@keyframes rotate {
+  to {
+      --angle: 360deg;
+  }
+}
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+.team h1 {
+  font-size: 50px;
+  font-family: 'valorant';
+  color: white;
+}
+/*GALLERY*/
+#gallery {
+  border: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+.art-piece {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  animation: floatAnimation 3s infinite ease-in-out;
+  border: 5px solid #fff;
+  border-radius: 15px;
+}
+.art-piece:nth-child(odd) {
+  animation-delay: 0.5s;
+}
+.art-piece:nth-child(even) {
+  animation-delay: 1s;
+}
+@keyframes floatAnimation {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+.art-piece img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  border-radius: 10px;
+}
+/*END OF GALLEY*/
+/*footer*/
+footer { 
+  width: 100%;
+  background-color: #333;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+ }
+.footer-info, .footer-contact, .footer-links {
+  flex: 1;
+  padding: 0 15px;
+ }
+.footer-info h3, .footer-contact h3, .footer-links h3 {
+  margin-bottom: 10px;
+ }
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+ }
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+ }
+.footer-links li a:hover {
+  text-decoration: underline;
+ }

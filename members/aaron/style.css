@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+audio {
+    display: none;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(#f03f68, #352156);
+    overflow-x: hidden;
+}
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #352156,transparent);
+    z-index: 11;
+}
+section img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section img#sun {
+    mix-blend-mode: screen;
+    left: 0;
+    filter: saturate(1);
+}
+section img#front {
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+section img#mountain {
+    padding-bottom: 300px;
+    z-index: 8;
+    bottom: 0;
+    left: 0;
+    filter: saturate(1);
+}
+section img#tower {
+    z-index: 10;
+    top: 0;
+    left: 0;
+    filter: contrast(1) saturate(1);
+}
+#text {
+    position: absolute;
+    color: #f3f3f3;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+}
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #352156;
+}
+.frame {
+    width: 400px;
+    position: absolute;
+    margin-left: 160px;
+    filter: brightness(1) invert(1);
+    animation: rotate 16s linear infinite;
+}
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+.pic {
+    height: auto;
+    width: 340px;
+    border-radius: 50%;
+    margin-left: 190px;
+    margin-top: 25px;
+}
+.upright {
+    border: 1px solid black;
+    border-radius: 16px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    margin-left: 650px;
+    margin-top: -350px;
+    padding: 15px;
+}
+h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    
+}
+.upright p {
+    font-size: 1em;
+    color: white;
+    opacity: 1;
+    margin-bottom: 35px;
+    font-size: 32px;
+}
+.span {
+    font-weight: bold;
+    margin-right: 15px;
+}
+.description {
+    margin-top: 100px;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 15px;
+    border-radius: 16px;
+}
+.description p {
+    font-size: 1em;
+    line-height: 2em;
+    color: white;
+    opacity: 1;
+    font-size: 16px;
+}
+.hobbies {
+    margin-top: 35px;
+    padding: 10px 0px;
+    margin-left: 430px;
+    margin-right: 430px;
+    border-radius: 16px;
+    width: auto;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+.hobbies img {
+     width: 50px;
+}
+.appear {
+    display: block;
+}
