@@ -10,8 +10,9 @@
 }
 body {
   overflow-x: hidden;
+    background: linear-gradient(rgb(154,8,32),#0a0815, #9a0820);
 }
-/*navbat*/
+/*navbar*/
 header {
   position: absolute;
   top: 0;
@@ -21,7 +22,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 102;
+  z-index: 10;
 }
 .icon {
   width: 80px;
@@ -95,7 +96,7 @@ header {
   bottom: 0;
   width: 100%;
   height: 100px;
-  z-index: 11;
+  z-index: 9;
 }
 .homepage h1 {
   position: absolute;
@@ -153,15 +154,6 @@ header {
   align-items: center;
   background: linear-gradient(rgb(154,8,32),#0a0815, #9a0820);
   background-size: cover;
-}
-.gallery {
-  border: 1px solid black;
-  width: 100%;
-  height: 100vh;
-}
-.footer{
-  border: 1px solid black;
-  height: 9rem;
 }
 /*ABOUT US*/
 .containerMembers {
@@ -245,46 +237,63 @@ header {
   color: white;
 }
 /*GALLERY*/
-#gallery {
-  border: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
+.galleria {
+  position: absolute;
+  left: 40%;
+  top: -15%;
+  z-index: 12;
+  font-size: 50px;
+  font-family: 'valorant';
+  color: white;
+  text-align: center;
+  color: white;
+  padding: 1rem 1.5rem;
+  z-index: 1;
+  border: 3px solid;
+  border-image-slice: 1;
+  border-width: 7px;
+  border-image-source: linear-gradient(var(--angle), #C70039, #F94C10, #F8DE22);
+  animation: 3s rotate linear infinite;
+  -angle: 0deg;
 }
-.art-piece {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 100%;
-  animation: floatAnimation 3s infinite ease-in-out;
-  border: 5px solid #fff;
-  border-radius: 15px;
+.gallery {
+  position: relative;
+  margin-top: 150px;
+  width: 100vw;
+  height: 130vh;
+  padding: 50px;
+  background: linear-gradient(rgb(154,8,32),#0a0815, #9a0820);
 }
-.art-piece:nth-child(odd) {
-  animation-delay: 0.5s;
-}
-.art-piece:nth-child(even) {
-  animation-delay: 1s;
-}
-@keyframes floatAnimation {
-  0%, 100% {
-      transform: translateY(0);
-  }
-  50% {
-      transform: translateY(-10px);
-  }
-}
-.art-piece img {
-  width: 100%;
+.groupimg {
+  max-width: 100%;
   height: auto;
-  max-height: 200px;
-  border-radius: 10px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.grid-wrapper , .groupImgCoontain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-wrapper, .groupImgCoontain, .groupimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.grid-wrapper {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
 }
 /*END OF GALLEY*/
 /*footer*/
 footer { 
-  width: 100%;
+  width: 100vw;
   background-color: #333;
+  margin-top: 50px;
   padding: 20px 0;
   display: flex;
   justify-content: space-around;
