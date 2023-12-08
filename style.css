@@ -169,7 +169,7 @@ header {
 .members {
   display: flex;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 16px; 
   transition: transform 0.3s ease-in-out, opacity 0.8s ease-in-out;
 }
 .members img {

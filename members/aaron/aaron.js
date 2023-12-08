@@ -10,12 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         backgroundMusic.play();
-        backgroundMusic.volume = 0; // Set initial volume to 0
+        backgroundMusic.volume = 0;
 
-        // Seek to 5 seconds into the music
         backgroundMusic.currentTime = 17;
 
-        // Fade in the music over 5 seconds
         var interval = setInterval(function() {
             backgroundMusic.volume += 0.05;
             if (backgroundMusic.volume >= 1) {
